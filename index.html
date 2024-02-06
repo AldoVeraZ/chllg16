@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Contactos</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <!-- Formulario para agregar y editar contactos -->
+    <form id="contactForm">
+      <div class="form-wrapper">
+        <h3>Mantenedor de Listados</h3>
+        <!-- Campos de entrada para nombre, email y fecha de nacimiento -->
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <div class="below">
+          <label for="birthdate">Fecha de Nacimiento:</label>
+          <input type="date" id="birthdate" required />
+        </div>
+
+        <!-- Botón para agregar un nuevo contacto -->
+        <button type="button" id="addButton" onclick="performAddAction()">
+          Agregar
+        </button>
+
+        <!-- Botón para actualizar un contacto existente (inicialmente deshabilitado) -->
+        <button
+          type="button"
+          id="updateButton"
+          onclick="performUpdateAction()"
+          disabled
+        >
+          Actualizar
+        </button>
+      </div>
+    </form>
+
+    <!-- Lista de contactos -->
+    <div class="ul-wrapper">
+      <ul id="contactList"></ul>
+    </div>
+
+    <!-- Script que carga la lógica de JavaScript -->
+    <script src="./app.js"></script>
+  </body>
+</html>

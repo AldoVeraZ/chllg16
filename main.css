@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.form-wrapper {
+  outline: solid thin;
+  max-width: 910px;
+  margin: 5rem auto;
+  padding: 1em;
+  margin-bottom: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(225px, 1fr));
+  gap: 10px;
+}
+
+h3 {
+  text-transform: uppercase;
+  grid-row: 1;
+  grid-column: 1/-1;
+  justify-self: center;
+}
+label {
+  grid-row: 2;
+  justify-self: start;
+}
+input {
+  grid-row: 3;
+  max-width: 100%; /* Cambia esto a la anchura máxima deseada */
+  width: 100%; /* Asegúrate de que los inputs ocupen el 100% del espacio disponible */
+  box-sizing: border-box; /* Asegúrate de que el ancho incluya el padding */
+}
+
+button {
+  grid-row: 4;
+}
+
+.ul-wrapper {
+  outline: solid thin;
+  max-width: 910px;
+  padding: 5px;
+  margin: 5rem auto;
+  margin-top: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 1em;
+  margin: auto;
+}
+
+/* Updated styles for the table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1rem; /* Add some spacing between the form and the table */
+}
+
+/* Updated styles for the table header */
+thead {
+  background-color: #f2f2f2;
+}
+
+/* Updated styles for the table cells */
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+/* Updated styles for the buttons within cells */
+td button {
+  padding: 5px 10px;
+  width: auto;
+}
+
+@media (min-width: 601px) and (max-width: 720px) {
+  .form-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+  }
+  .below {
+    grid-row: 4;
+  }
+  button {
+    grid-row: 5;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-wrapper {
+    grid-template-columns: 1fr; /* Cambiar a una sola columna en pantallas más pequeñas */
+    gap: 5px; /* Ajustar el espacio entre los elementos */
+    padding: 0 10px; /* Ajustar el relleno para evitar que los elementos se salgan del contenedor */
+  }
+
+  input {
+    max-width: 100%; /* Hacer que los inputs ocupen el 100% del ancho del contenedor */
+  }
+
+  label,
+  input {
+    width: 100%; /* Asegurar que las etiquetas y los inputs ocupen el ancho completo de la columna */
+    margin-bottom: 10px; /* Agregar espacio entre cada campo */
+  }
+
+  button {
+    width: 100%; /* Asegurar que el botón ocupe el ancho completo de la columna */
+  }
+  label,
+  input,
+  button {
+    grid-row: auto; /* Restablecer la disposición en filas */
+    grid-column: auto; /* Restablecer la disposición en columnas */
+    width: 100%; /* Asegurar que ocupen el ancho completo del contenedor */
+    margin-bottom: 10px; /* Agregar espacio entre cada elemento */
+  }
+
+  table {
+    display: block;
+    width: 100%;
+  }
+
+  tr {
+    display: block;
+    margin-bottom: 15px; /* Add spacing between rows */
+  }
+
+  th,
+  td {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  th,
+  td button {
+    width: auto;
+  }
+}

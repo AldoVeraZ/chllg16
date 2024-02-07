@@ -165,7 +165,7 @@ function loadContactList() {
   thead.appendChild(headerRow);
   table.appendChild(thead);
 
-  // Iterate sobre la lista de contactos y crea filas de tabla con datos de nombre, email, fecha de nacimiento y botones para editar y eliminar
+  // Itera sobre la lista de contactos y crea filas de tabla con datos de nombre, email, fecha de nacimiento y botones para editar y eliminar
   for (const contact of contacts) {
     const tr = document.createElement("tr");
     tr.innerHTML = `

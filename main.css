@@ -27,7 +27,7 @@ body {
 }
 
 .below {
-  grid-row: auto; /* Cambia la fila a 3 */
+  grid-row: auto;
 }
 
 h3 {
@@ -48,25 +48,23 @@ label {
 
 input {
   grid-row: 3;
-  max-width: 100%; /* Cambia esto a la anchura máxima deseada */
-  width: 100%; /* Asegúrate de que los inputs ocupen el 100% del espacio disponible */
-  box-sizing: border-box; /* Asegúrate de que el ancho incluya el padding */
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
   background-color: #c0c0c0;
   border: none;
   border-bottom: 2px solid #00ffff;
 }
 
-/* Estilo para el botón de "Actualizar" cuando está deshabilitado */
 button#updateButton[disabled] {
   background-color: gray !important;
   color: #fff;
   border: none;
 }
 
-/* Estilo para el botón de "Actualizar" cuando está habilitado */
 button#updateButton {
-  background-color: #b400ff; /* Cambia este color según lo desees */
-  color: #00ffff; /* Cambia este color según lo desees */
+  background-color: #b400ff;
+  color: #00ffff;
   border-radius: 10px;
 }
 
@@ -98,21 +96,19 @@ button:hover:not(#updateButton) {
 }
 
 thead {
-  background-color: #00ff00 !important; /* Cambia este color al que desees */
+  background-color: #00ff00 !important;
 }
 
-/* Para el borde de las celdas de encabezado */
 table th {
-  border: 1px solid #000; /* Cambia el color y el grosor del borde según tus preferencias */
+  border: 1px solid #000;
 }
 table td:hover {
   background-color: #000;
   color: #00ff00;
 }
 
-/* Para el borde de las celdas del cuerpo */
 table td {
-  border: 1px solid #000; /* Cambia el color y el grosor del borde según tus preferencias */
+  border: 1px solid #000;
 }
 
 ul {
@@ -121,19 +117,16 @@ ul {
   margin: auto;
 }
 
-/* Updated styles for the table */
 table {
   border-collapse: collapse;
   width: 100%;
-  margin-top: 1rem; /* Add some spacing between the form and the table */
+  margin-top: 1rem;
 }
 
-/* Updated styles for the table header */
 thead {
   background-color: #f2f2f2;
 }
 
-/* Updated styles for the table cells */
 td,
 th {
   border: 1px solid #dddddd;
@@ -141,7 +134,6 @@ th {
   padding: 8px;
 }
 
-/* Updated styles for the buttons within cells */
 td button {
   padding: 5px 10px;
   width: auto;
@@ -164,31 +156,32 @@ td button {
 
 @media (max-width: 600px) {
   .form-wrapper {
-    grid-template-columns: 1fr; /* Cambiar a una sola columna en pantallas más pequeñas */
-    gap: 5px; /* Ajustar el espacio entre los elementos */
-    padding: 0 10px; /* Ajustar el relleno para evitar que los elementos se salgan del contenedor */
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 0 10px;
   }
 
   input {
-    max-width: 100%; /* Hacer que los inputs ocupen el 100% del ancho del contenedor */
+    max-width: 100%;
   }
 
   label,
   input {
-    width: 100%; /* Asegurar que las etiquetas y los inputs ocupen el ancho completo de la columna */
-    margin-bottom: 10px; /* Agregar espacio entre cada campo */
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   button {
-    width: 100%; /* Asegurar que el botón ocupe el ancho completo de la columna */
+    width: 100%;
+    padding: 0.5em;
   }
   label,
   input,
   button {
-    grid-row: auto; /* Restablecer la disposición en filas */
-    grid-column: auto; /* Restablecer la disposición en columnas */
-    width: 100%; /* Asegurar que ocupen el ancho completo del contenedor */
-    margin-bottom: 10px; /* Agregar espacio entre cada elemento */
+    grid-row: auto;
+    grid-column: auto;
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   table {
@@ -198,7 +191,7 @@ td button {
 
   tr {
     display: block;
-    margin-bottom: 15px; /* Add spacing between rows */
+    margin-bottom: 15px;
   }
 
   th,

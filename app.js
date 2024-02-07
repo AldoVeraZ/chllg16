@@ -2,6 +2,14 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Carga la lista de contactos al iniciar la página
   loadContactList();
+
+  // Verifica si el botón de "Actualizar" está deshabilitado y ajusta su clase
+  const updateButton = document.getElementById("updateButton");
+  if (updateButton.disabled) {
+    updateButton.classList.add("disabled");
+  } else {
+    updateButton.classList.remove("disabled");
+  }
 });
 
 // Función para realizar la acción de agregar un nuevo contacto

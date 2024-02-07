@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: "Courier New", monospace;
   padding: 0;
+  background: linear-gradient(90deg, #ffa500, #00ffff);
 }
 
 * {
@@ -14,10 +15,19 @@ body {
   margin: 5rem auto;
   padding: 1em;
   margin-bottom: 10px;
+  border-radius: 10px;
+  border: none;
 
   display: grid;
   grid-template-columns: repeat(3, minmax(225px, 1fr));
   gap: 10px;
+  grid-row: auto;
+
+  background-color: #c0c0c0;
+}
+
+.below {
+  grid-row: auto; /* Cambia la fila a 3 */
 }
 
 h3 {
@@ -25,20 +35,56 @@ h3 {
   grid-row: 1;
   grid-column: 1/-1;
   justify-self: center;
+  color: #00ffff;
+  font-size: x-large;
 }
 label {
   grid-row: 2;
-  justify-self: start;
+  justify-self: center;
+  color: #b400ff;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
+
 input {
   grid-row: 3;
   max-width: 100%; /* Cambia esto a la anchura máxima deseada */
   width: 100%; /* Asegúrate de que los inputs ocupen el 100% del espacio disponible */
   box-sizing: border-box; /* Asegúrate de que el ancho incluya el padding */
+  background-color: #c0c0c0;
+  border: none;
+  border-bottom: 2px solid #00ffff;
+}
+
+/* Estilo para el botón de "Actualizar" cuando está deshabilitado */
+button#updateButton[disabled] {
+  background-color: gray !important;
+  color: #fff;
+  border: none;
+}
+
+/* Estilo para el botón de "Actualizar" cuando está habilitado */
+button#updateButton {
+  background-color: #b400ff; /* Cambia este color según lo desees */
+  color: #00ffff; /* Cambia este color según lo desees */
+  border-radius: 10px;
 }
 
 button {
   grid-row: 4;
+}
+button:not(#updateButton) {
+  background: linear-gradient(120deg, #b400ff, #ffff00);
+  padding: 0.5em;
+  border-radius: 10px;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+}
+button:hover {
+  cursor: pointer;
+  color: #b400ff;
+  background: #ffff00;
+  border: 2px solid #b400ff;
 }
 
 .ul-wrapper {
@@ -47,6 +93,22 @@ button {
   padding: 5px;
   margin: 5rem auto;
   margin-top: auto;
+
+  background-color: #c0c0c0;
+}
+
+thead {
+  background-color: #00ff00 !important; /* Cambia este color al que desees */
+}
+
+/* Para el borde de las celdas de encabezado */
+table th {
+  border: 1px solid #000; /* Cambia el color y el grosor del borde según tus preferencias */
+}
+
+/* Para el borde de las celdas del cuerpo */
+table td {
+  border: 1px solid #000; /* Cambia el color y el grosor del borde según tus preferencias */
 }
 
 ul {
@@ -79,6 +141,8 @@ th {
 td button {
   padding: 5px 10px;
   width: auto;
+}
+@media (min-width: 721px) {
 }
 
 @media (min-width: 601px) and (max-width: 720px) {

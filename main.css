@@ -80,7 +80,7 @@ button:not(#updateButton) {
   border: 2px solid #00ffff;
   color: #00ffff;
 }
-button:hover {
+button:hover:not(#updateButton) {
   cursor: pointer;
   color: #b400ff;
   background: #ffff00;

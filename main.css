@@ -105,6 +105,10 @@ thead {
 table th {
   border: 1px solid #000; /* Cambia el color y el grosor del borde según tus preferencias */
 }
+table td:hover {
+  background-color: #000;
+  color: #00ff00;
+}
 
 /* Para el borde de las celdas del cuerpo */
 table td {

@@ -68,6 +68,18 @@ button#updateButton {
   border-radius: 10px;
 }
 
+button#addButton[disabled] {
+  background-color: gray !important;
+  color: unset;
+  border: unset;
+}
+
+button#addButton {
+  background-color: #b400ff;
+  color: #00ffff;
+  border-radius: 10px;
+}
+
 button {
   grid-row: 4;
 }

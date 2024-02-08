@@ -10,6 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     updateButton.classList.remove("disabled");
   }
+  // Verifica si el botón de "Agregar" está deshabilitado y ajusta su clase
+  const addButton = document.getElementById("addButton");
+  if (addButton.disabled) {
+    addButton.classList.add("disabled");
+  } else {
+    addButton.classList.remove("disabled");
+  }
 });
 
 // Función para realizar la acción de agregar un nuevo contacto
